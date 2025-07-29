@@ -1,63 +1,63 @@
-# BajajAssignment
-This project is a REST API built for the Chitkara Campus Hiring Full Stack assignment.The API processes an array of mixed data and returns categorized results based on type and logic defined in the problem statement.
+This project is a Node.js REST API that processes an array of mixed data (numbers, letters, and special characters) and returns categorized outputs as per the assignment requirements.
 
----
-## Hosted API Endpoint
-
-> **POST** [`/bfhl`](https://bajajassignment-jrkz.onrender.com/bfhl)  
->  Base URL: `https://bajajassignment-jrkz.onrender.com`
-
----
-## Example Request
-
-```json
+API Endpoint:-
 POST /bfhl
-Content-Type: application/json
+Base URL: https://bajajassignment-jrkz.onrender.com
 
-{
-  "data": ["a", "1", "334", "4", "R", "$"]
-}
+Example Input:-
+{ "data": ["a", "1", "334", "4", "R", "$"] }
 
----
-## Example Response
-{
-  "is_success": true,
-  "user_id": "john_doe_17091999",
-  "email": "john@xyz.com",
-  "roll_number": "ABCD123",
-  "odd_numbers": ["1"],
-  "even_numbers": ["334", "4"],
-  "alphabets": ["A", "R"],
-  "special_characters": ["$"],
-  "sum": "339",
-  "concat_string": "Ra"
-}
+Example Output:-
+{ "is_success": true, "user_id": "john_doe_17091999", "email": "john@xyz.com", "roll_number": "ABCD123", "odd_numbers": ["1"], "even_numbers": ["334", "4"], "alphabets": ["A", "R"], "special_characters": ["$"], "sum": "339", "concat_string": "Ra" }
 
-## Tech Stack
+Developer Info:-
+User ID Format: john_doe_17091999
 
+Email: john@xyz.com
+
+Roll Number: ABCD123
+
+Tech Stack:-
 Node.js
+
 Express.js
+
 CORS
-Hosted on Render
 
-Logic Summary
+Render (for deployment)
 
-The API:
 
-Accepts an array of strings/numbers/special characters.
+Logic Summary:-
+Separates even and odd numbers (as strings)
 
-Returns categorized arrays:
+Converts alphabets to uppercase and collects them
 
-Odd numbers (as strings)
+Extracts special characters
 
-Even numbers (as strings)
+Calculates sum of numeric values (returned as a string)
 
-Uppercase alphabets
+Builds a reversed concatenated string from all alphabetic characters with alternating caps
 
-Special characters
+Features:-
+Clean structure using Express routing
 
-Returns the sum of numbers (as a string)
+Error handling for invalid input
 
-Builds a reverse alternating caps string from all letters
+HTTP status codes: 200 (success), 400 (bad request), 500 (server error)
 
-Responds with metadata: user ID, email, roll number, and status
+Hosted live using Render
+
+Tested using Postman
+
+Status Codes:-
+200 - Success
+400 - Invalid input format
+500 - Internal server error
+
+Submission Checklist
+Hosted API working at: https://bajajassignment-jrkz.onrender.com/bfhl
+Public GitHub repository created
+Logic matches assignment rules
+Code is modular and readable
+README includes all required details
+
